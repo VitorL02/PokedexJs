@@ -5,10 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./favicon/favicon.png">
     <title>Pokedex-Js</title>
 </head>
 <body>
-    
+    <main>
+        <img src="" alt="Pokemon" class="pokemon-image" id="image">
+        <img src="./imgs/pokedex.png" alt="Pokedex" class="pokedex">
+        <h1 class="pokemon-data">
+            <span class="pokemon-number" id ="number"></span>
+            <span class="pokemon-name" id="name"></span>
+        </h1>
+        <form action="" id="search" class="form">
+            <input id="search-query" type="search" placeholder="Nome ou Numero" class="input-search" required>
+        </form>
+        <div class="buttons">
+            <button class="button btn-prev" id="prev"">Prev &lt;</button>
+            <button class="button btn-next" id="next">Next &gt;</button>
+        </div>
+    </main> 
 </body>
 <script src="./js/index.js"></script>
 </html>
