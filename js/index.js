@@ -25,10 +25,14 @@ const renderPokemonData  = async (pokemon)=>{
     pokemonName.innerHTML = 'Loading...';
     pokemonNumber.innerHTML = '';
     const data = await fetchPokemon(pokemon);
+    console.log(data);
     if(data){
         pokemonName.innerHTML = data.name;
         pokemonNumber.innerHTML = data.id;
         pokemonImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
+        if(data.id >= 650 ){
+            pokemonImage.src = data['sprites']['versions']['generation-vii']['ultra-sun-ultra-moon']['front_default']; 
+        }
         pokemonImage.style.display = 'block';
         searchPokemonById = data.id;
     }else{
